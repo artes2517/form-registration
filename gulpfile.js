@@ -92,7 +92,7 @@ gulp.task('move:jquery', function(){
   .pipe(gulp.dest(path.build.js))
 });
 
-gulp.task('move:boostrap', function(){
+gulp.task('move:bootstrap', function(){
   gulp.src(path.src.bootstrap)
   .pipe(gulp.dest(path.build.css))
 });
@@ -115,13 +115,13 @@ gulp.task('image:build', function () {
 });
 
 gulp.task('build', gulpsync.sync([
-  'html:build',
   'js:build',
   'move:jquery',
   'style:build',
   'move:bootstrap',
   'fonts:build',
-  'image:build'
+  'image:build',
+  'html:build'
 ]));
 
 gulp.task('watch', function(){
@@ -145,3 +145,11 @@ gulp.task('watch', function(){
 gulp.task('webserver', function () {
   browserSync(config);
 });
+
+gulp.task('clean', function (cb) {
+  rimraf(path.clean, cb);
+});
+
+gulp.task('dev', ['build', 'webserver', 'watch']);
+
+gulp.task('default', ['dev']);
