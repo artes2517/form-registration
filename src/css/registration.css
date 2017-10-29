@@ -5,12 +5,7 @@ body {
 }
 
 .content {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
   padding-top: 100px;
-  width: 100%;
 }
 
 .header {
@@ -37,81 +32,4 @@ body {
   margin: 0;
   position: fixed;
   width: 100%; 
-}
-
-.registration__button {
-  display: inline-block;
-  font-weight: normal;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.25;
-  border-radius: 0.25rem;
-  transition: all 0.15s ease-in-out;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff
-}
-
-.registration__button_action:hover {
-  color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-
-.form-control {
-  display: block;
-  width: 90%;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.25;
-  color: #495057;
-  background-color: #fff;
-  background-image: none;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-  margin-right: 10px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
-
-@media (min-width: 320px) {
-  .content {
-    max-width: 320px;
-    padding-left: 5px;
-    padding-right: 15px;
-  }
-}
-
-@media (min-width: 480px) {
-    .content {
-      max-width: 480px;
-    }
-  }
-
-@media (min-width: 576px) {
-  .content {
-    max-width: 540px;
-  }
-}
-  
-@media (min-width: 768px) {
-  .content {
-    max-width: 720px;
-  }
-}
-  
-@media (min-width: 992px) {
-  .content {
-    max-width: 960px;
-  }
-}
-  
-@media (min-width: 1200px) {
-  .content {
-    max-width: 1140px;
-  }
 }
