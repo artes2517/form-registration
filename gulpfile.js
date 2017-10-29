@@ -16,3 +16,30 @@ var removeHtmlComments = require('gulp-remove-html-comments');
 var browserSync = require("browser-sync");
 var reload = browserSync.reload;
 var gulpsync = require('gulp-sync')(gulp);
+
+var path = {
+  build: {
+  html: 'build/',
+  js: 'build/js/',
+  css: 'build/css/',
+  img: 'build/img/',
+  fonts: 'build/fonts/'
+},
+src: {
+  html: 'src/*.html',
+  js: 'src/js/registration.js',
+  jquery: 'src/js/jquery-3.2.1.min.js',
+  style: 'src/css/registration.css',
+  bootstrap: 'src/css/bootstrap.min.css',
+  img: 'src/img/**/*.*',
+  fonts: 'src/fonts/**/*.*'
+},
+watch: {
+  html: 'src/**/*.html',
+  js: 'src/js/**/*.js',
+  style: 'src/css/**/*.css',
+  img: 'src/img/**/*.*',
+  fonts: 'src/fonts/**/*.*'
+},
+  clean: './build'
+};
