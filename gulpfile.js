@@ -96,3 +96,20 @@ gulp.task('move:boostrap', function(){
   gulp.src(path.src.bootstrap)
   .pipe(gulp.dest(path.build.css))
 });
+
+gulp.task('fonts:build', function() {
+  gulp.src(path.src.fonts)
+  .pipe(gulp.dest(path.build.fonts))
+});
+
+gulp.task('image:build', function () {
+  gulp.src(path.src.img)
+  .pipe(imagemin({
+  progressive: true,
+  svgoPlugins: [{removeViewBox: false}],
+  use: [pngquant()],
+  interlaced: true
+  }))
+  .pipe(gulp.dest(path.build.img))
+  .pipe(reload({stream: true}));
+});
