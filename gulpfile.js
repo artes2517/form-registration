@@ -86,3 +86,13 @@ gulp.task('style:build', function () {
   .pipe(gulp.dest(path.build.css))
   .pipe(reload({stream: true}));
 });
+
+gulp.task('move:jquery', function(){
+  gulp.src(path.src.jquery)
+  .pipe(gulp.dest(path.build.js))
+});
+
+gulp.task('move:boostrap', function(){
+  gulp.src(path.src.bootstrap)
+  .pipe(gulp.dest(path.build.css))
+});
