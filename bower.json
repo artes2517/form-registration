@@ -1,0 +1,18 @@
+{
+  "name": "form-registration",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Artes2517"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/artes2517/form-registration",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
