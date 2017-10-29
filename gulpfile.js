@@ -43,3 +43,13 @@ watch: {
 },
   clean: './build'
 };
+
+var config = {
+  server: {
+    baseDir: "./build"
+  },
+  tunnel: true,
+  host: 'localhost',
+  port: 8080,
+  logPrefix: "Artes2517"
+};
