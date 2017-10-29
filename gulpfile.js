@@ -113,3 +113,13 @@ gulp.task('image:build', function () {
   .pipe(gulp.dest(path.build.img))
   .pipe(reload({stream: true}));
 });
+
+gulp.task('build', gulpsync.sync([
+  'html:build',
+  'js:build',
+  'move:jquery',
+  'style:build',
+  'move:bootstrap',
+  'fonts:build',
+  'image:build'
+]));
