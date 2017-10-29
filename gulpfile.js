@@ -53,3 +53,17 @@ var config = {
   port: 8080,
   logPrefix: "Artes2517"
 };
+
+gulp.task('html:build', function () {
+  gulp.src(path.src.html)
+  .pipe(rigger())
+  .pipe(gulp.dest(path.build.html))
+  .on('end', function () {
+    gulp.src(path.build.html + 'index.html')
+    .pipe(inject(gulp.src('./build/js/*.js', {read: false}), {relative: true}))
+    .pipe(inject(gulp.src('./build/css/*.css', {read: false}), {relative: true}))
+    .pipe(removeHtmlComments())
+    .pipe(gulp.dest(path.build.html));
+  })
+  .pipe(reload({stream: true}));
+});
